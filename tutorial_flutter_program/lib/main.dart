@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.blue),
-        darkTheme: ThemeData.dark(),
-        themeMode: ThemeMode.dark,
         home: Scaffold(
           appBar: AppBar(
             title: const Text(
-              'Northern VA Church of Christ',
+              'My First App',
               style: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
@@ -22,7 +19,22 @@ void main() => runApp(
           ),
           body: const Center(
             child: Text(
-              'Hello Member',
+              'Hello Jackson',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.normal,
+                fontStyle: FontStyle.normal,
+                letterSpacing: 2.0,
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontFamily: 'Montserrat',
+              ),
+            ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: const Color(0xFF04578F),
+            child: const Text(
+              'Hi',
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.normal,
@@ -32,11 +44,6 @@ void main() => runApp(
                 fontFamily: 'Montserrat',
               ),
             ),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-            child: Image.asset('assets/novalogo.png'),
           ),
         ),
       ),
