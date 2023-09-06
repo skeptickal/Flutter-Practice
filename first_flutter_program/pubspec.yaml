@@ -52,6 +52,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/novalogo.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -94,7 +96,7 @@ flutter:
         - asset: fonts/static/Montserrat-SemiBold.ttf
         - asset: fonts/static/Montserrat-SemiBoldItalic.ttf
         - asset: fonts/static/Montserrat-Thin.ttf
-        - asset: fonts/static/Montserrat-ThinItalic.ttf
+        - asset: fonts/static/Montserrat-ExtraBold.ttf
 
   #
   # For details regarding fonts from package dependencies,
