@@ -25,15 +25,11 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color(0xFF04578F),
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-            logger.i('you clicked me again!');
-          },
-          icon: const Icon(Icons.person_outline_sharp),
-          color: const Color(0xFFF5C937),
-          iconSize: 50.0,
-        ),
+      body: Container(
+        padding: const EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+        margin: const EdgeInsets.all(30.0),
+        color: Colors.grey,
+        child: const Text('hello'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
