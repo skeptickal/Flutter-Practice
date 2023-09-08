@@ -25,27 +25,35 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color(0xFF04578F),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Row(
         children: [
-          const Row(
-            children: [Text('hello'), Text('world')],
+          Expanded(
+            flex: 3,
+            child: Image.asset('assets/novalogo.png'),
           ),
-          Container(
-            padding: const EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: const Text('container 1'),
+          Expanded(
+            flex: 6,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: const Text('1'),
+            ),
           ),
-          Container(
-            padding: const EdgeInsets.all(40.0),
-            color: Colors.yellow,
-            child: const Text('container 2'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: const Text('2'),
+            ),
           ),
-          Container(
-            padding: const EdgeInsets.all(30.0),
-            color: Colors.red,
-            child: const Text('container 3'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.pink,
+              child: const Text('3'),
+            ),
           ),
         ],
       ),
