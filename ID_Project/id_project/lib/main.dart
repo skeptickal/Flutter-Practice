@@ -6,8 +6,15 @@ void main() {
   ));
 }
 
-class NovaCard extends StatelessWidget {
+class NovaCard extends StatefulWidget {
   const NovaCard({super.key});
+
+  @override
+  State<NovaCard> createState() => _NovaCardState();
+}
+
+class _NovaCardState extends State<NovaCard> {
+  int memberLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,23 +32,32 @@ class NovaCard extends StatelessWidget {
         backgroundColor: const Color(0xFF04578F),
         elevation: 0.0,
       ),
-      body: const Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            memberLevel += 1;
+          });
+        },
+        backgroundColor: Colors.amber,
+        child: const Icon(Icons.add),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/profile.jpeg'),
                 radius: 40.0,
               ),
             ),
-            Divider(
+            const Divider(
               height: 90.0,
               color: Colors.grey,
             ),
-            SizedBox(height: 20.0),
-            Text(
+            const SizedBox(height: 20.0),
+            const Text(
               'NAME',
               style: TextStyle(
                 color: Colors.grey,
@@ -49,8 +65,8 @@ class NovaCard extends StatelessWidget {
                 fontFamily: 'Montserrat',
               ),
             ),
-            SizedBox(height: 10.0),
-            Text(
+            const SizedBox(height: 10.0),
+            const Text(
               'Jackson Geer',
               style: TextStyle(
                 color: Colors.amber,
@@ -59,8 +75,8 @@ class NovaCard extends StatelessWidget {
                 fontFamily: 'Montserrat',
               ),
             ),
-            SizedBox(height: 30.0),
-            Text(
+            const SizedBox(height: 30.0),
+            const Text(
               'MEMBER SINCE',
               style: TextStyle(
                 color: Colors.grey,
@@ -68,10 +84,10 @@ class NovaCard extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
-              'September 8th, 2013',
-              style: TextStyle(
+              'Spiritual Age: $memberLevel years',
+              style: const TextStyle(
                 color: Colors.amber,
                 fontSize: 18.0,
                 letterSpacing: 2.0,
@@ -79,8 +95,8 @@ class NovaCard extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(height: 30.0),
-            Row(
+            const SizedBox(height: 30.0),
+            const Row(
               children: [
                 Icon(
                   Icons.email,
